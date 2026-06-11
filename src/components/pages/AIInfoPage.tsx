@@ -21,22 +21,22 @@ export default function AIInfoPage() {
   return (
     <div>
       <div className="mb-[24px]">
-        <h1 className="text-[28px] font-bold text-gray-900 mb-[8px]">AI 资讯聚合</h1>
-        <p className="text-[14px] text-gray-500">追踪行业最新AI动态、Github高赞技能以及部门内部最佳实践。</p>
+        <h1 className="text-[30px] font-semibold text-[#1A1A1A] mb-[8px] tracking-[-0.03em]">AI 资讯聚合</h1>
+        <p className="text-[14px] text-[#A3A3A0]">追踪行业最新AI动态、Github高赞技能以及部门内部最佳实践。</p>
       </div>
       <div>
-        <div className="bg-white rounded-[16px] p-[24px] shadow-sm border border-gray-100">
+        <div className="bg-white rounded-[24px] p-[32px] border border-[#E2E2DD]">
           <div className="flex justify-between items-center mb-[24px]">
             <div className="flex items-center gap-[8px]">
-              <div className="w-[4px] h-[16px] bg-purple-500 rounded-full" />
-              <h2 className="text-[18px] font-semibold text-gray-900 tracking-tight">前沿视界</h2>
+              <div className="w-[4px] h-[16px] bg-[#C5E63A] rounded-full" />
+              <h2 className="text-[18px] font-medium text-[#1A1A1A] tracking-[-0.02em]">前沿视界</h2>
             </div>
-            <div className="flex bg-gray-100 p-[4px] rounded-[8px]">
+            <div className="flex bg-[#F5F5F0] p-[4px] rounded-full">
               {([['news', '行业动态'], ['skills', '开源趋势'], ['practice', '内部沉淀']] as [Tab, string][]).map(([key, label]) => (
                 <button
                   key={key}
-                  className={`px-[16px] py-[6px] text-[13px] font-medium rounded-[6px] transition-colors ${
-                    activeTab === key ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'
+                  className={`px-[16px] py-[6px] text-[13px] font-medium rounded-full transition-colors ${
+                    activeTab === key ? 'bg-white text-[#1A1A1A] shadow-[0_1px_3px_rgba(0,0,0,0.06)]' : 'text-[#A3A3A0] hover:text-[#6B6B6B]'
                   }`}
                   onClick={() => setActiveTab(key)}
                 >
@@ -49,47 +49,47 @@ export default function AIInfoPage() {
           <div className="min-h-[300px]">
             {activeTab === 'news' && (
               <div className="flex flex-col gap-[16px]">
-                <div className="p-[20px] bg-[#F8F9FA] rounded-[12px] hover:shadow-sm transition-shadow">
-                  <h3 className="text-[16px] font-semibold text-gray-800 mb-[8px]">金融支付 × AI 探索</h3>
-                  <p className="text-[14px] text-gray-500 leading-relaxed">汇集最新支付行业与大模型结合的落地案例，探索智能客服、风控、投研等场景的变革与技术实践。</p>
+                <div className="p-[20px] bg-[#F5F5F0] rounded-[16px]">
+                  <h3 className="text-[16px] font-medium text-[#1A1A1A] mb-[8px] tracking-[-0.01em]">金融支付 × AI 探索</h3>
+                  <p className="text-[14px] text-[#6B6B6B] leading-relaxed">汇集最新支付行业与大模型结合的落地案例，探索智能客服、风控、投研等场景的变革与技术实践。</p>
                 </div>
-                <div className="p-[20px] bg-[#F8F9FA] rounded-[12px] hover:shadow-sm transition-shadow">
+                <div className="p-[20px] bg-[#F5F5F0] rounded-[16px]">
                   <div className="flex items-center justify-between mb-[8px]">
-                    <h3 className="text-[16px] font-semibold text-gray-800">AI 前沿通讯</h3>
+                    <h3 className="text-[16px] font-medium text-[#1A1A1A] tracking-[-0.01em]">AI 前沿通讯</h3>
                     <a
                       href={NEWSLETTER_BASE}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[13px] bg-white border border-gray-200 px-[12px] py-[4px] rounded-[6px] text-gray-600 hover:text-blue-600 font-medium transition-colors"
+                      className="text-[13px] bg-white border border-[#E2E2DD] px-[14px] py-[4px] rounded-full text-[#6B6B6B] hover:text-[#4A7C59] font-medium transition-colors"
                     >
                       阅读原刊 ↗
                     </a>
                   </div>
-                  <p className="text-[14px] text-gray-500">精选 Newsletter 内容，自动追踪硅谷与国内顶级团队的最新突破。</p>
+                  <p className="text-[14px] text-[#6B6B6B]">精选 Newsletter 内容，自动追踪硅谷与国内顶级团队的最新突破。</p>
                 </div>
               </div>
             )}
 
             {activeTab === 'skills' && (
               <div className="flex flex-col gap-[12px]">
-                <div className="text-[13px] text-gray-500 font-medium mb-[4px]">GitHub 高赞 AI 项目精选</div>
+                <div className="text-[13px] text-[#A3A3A0] font-medium mb-[4px]">GitHub 高赞 AI 项目精选</div>
                 {ghSkills.map(skill => (
                   <a
                     key={skill.name}
                     href={skill.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-[16px] bg-[#F8F9FA] rounded-[12px] hover:bg-white hover:shadow-md transition-all duration-200 border border-transparent hover:border-gray-100 group block"
+                    className="p-[16px] bg-[#F5F5F0] rounded-[16px] hover:bg-white hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-200 border border-transparent hover:border-[#E2E2DD] group block"
                   >
                     <div className="flex justify-between items-center mb-[8px]">
-                      <span className="text-[16px] font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{skill.name}</span>
-                      <span className="text-[13px] font-medium text-amber-600 bg-amber-50 px-[8px] py-[2px] rounded-full flex items-center gap-[4px]">
-                        <Star size={11} className="fill-amber-500" />{skill.stars}
+                      <span className="text-[16px] font-medium text-[#1A1A1A] group-hover:text-[#4A7C59] transition-colors">{skill.name}</span>
+                      <span className="text-[13px] font-medium text-[#D4A016] bg-[#FDF8E8] px-[8px] py-[2px] rounded-full flex items-center gap-[4px]">
+                        <Star size={11} className="fill-[#D4A016]" />{skill.stars}
                       </span>
                     </div>
                     <div className="flex items-center gap-[12px]">
-                      <div className="text-[14px] text-gray-500 leading-relaxed flex-1">{skill.desc}</div>
-                      <span className="text-[12px] text-gray-400 bg-gray-100 px-[8px] py-[2px] rounded">{skill.lang}</span>
+                      <div className="text-[14px] text-[#6B6B6B] leading-relaxed flex-1">{skill.desc}</div>
+                      <span className="text-[12px] text-[#A3A3A0] bg-[#EDEDE9] px-[8px] py-[2px] rounded-full">{skill.lang}</span>
                     </div>
                   </a>
                 ))}
@@ -98,17 +98,17 @@ export default function AIInfoPage() {
 
             {activeTab === 'practice' && (
               <div className="flex flex-col gap-[16px]">
-                <div className="p-[24px] bg-[#F8F9FA] rounded-[12px] border border-dashed border-gray-300 text-center">
-                  <div className="w-[48px] h-[48px] bg-white rounded-full flex items-center justify-center shadow-sm mx-auto mb-[16px]">
-                    <BookOpen size={20} className="text-gray-400" />
+                <div className="p-[24px] bg-[#F5F5F0] rounded-[20px] border border-dashed border-[#D5D5CF] text-center">
+                  <div className="w-[48px] h-[48px] bg-white rounded-full flex items-center justify-center mx-auto mb-[16px]">
+                    <BookOpen size={20} className="text-[#A3A3A0]" />
                   </div>
-                  <h3 className="text-[16px] font-semibold text-gray-800 mb-[8px]">内部沉淀与最佳实践</h3>
-                  <p className="text-[14px] text-gray-500 mb-[20px] max-w-[400px] mx-auto">汇集部门内创新分享、架构演进与教程文档，打造团队知识中枢。</p>
+                  <h3 className="text-[16px] font-medium text-[#1A1A1A] mb-[8px] tracking-[-0.01em]">内部沉淀与最佳实践</h3>
+                  <p className="text-[14px] text-[#6B6B6B] mb-[20px] max-w-[400px] mx-auto">汇集部门内创新分享、架构演进与教程文档，打造团队知识中枢。</p>
                   <a
                     href={JOYSPACE_TEAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block px-[20px] py-[8px] bg-white border border-gray-200 text-gray-700 rounded-[8px] text-[14px] font-medium hover:bg-gray-50 transition-colors shadow-sm"
+                    className="inline-block px-[24px] py-[10px] bg-[#1A1A1A] text-white rounded-full text-[14px] font-medium hover:bg-[#333333] transition-colors"
                   >
                     前往 JoySpace 查阅
                   </a>

@@ -15,10 +15,10 @@ export default function App() {
   const [page, setPage] = useState<PageKey>('overview')
 
   return (
-    <div className="min-h-screen bg-[#f5f6f8]">
-      <div className="p-[24px]">
-        <div className="text-[13px] text-gray-400 font-medium mb-[16px]">{pageLabels[page]}</div>
-        <div className="flex gap-[24px] items-start">
+    <div className="min-h-screen bg-[#EDEDE9]">
+      <div className="p-[32px]">
+        <div className="text-[12px] text-[#A3A3A0] font-medium mb-[20px] tracking-[0.08em] uppercase">{pageLabels[page]}</div>
+        <div className="flex gap-[28px] items-start">
           <Sidebar activePage={page} onNavigate={setPage} />
           <main className="flex-1 min-w-0">
             {page === 'overview' && <OverviewPage />}
