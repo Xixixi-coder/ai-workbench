@@ -5,27 +5,18 @@ import OverviewPage from './components/pages/OverviewPage'
 import AIInfoPage from './components/pages/AIInfoPage'
 import OrgActivityPage from './components/pages/OrgActivityPage'
 
-const pageLabels: Record<PageKey, string> = {
-  overview: '工作台概览',
-  aiInfo: 'AI资讯',
-  orgActivity: '组织活动',
-}
-
 export default function App() {
   const [page, setPage] = useState<PageKey>('overview')
 
   return (
-    <div className="min-h-screen bg-[#EDEDE9]">
-      <div className="p-[32px]">
-        <div className="text-[12px] text-[#A3A3A0] font-medium mb-[20px] tracking-[0.08em] uppercase">{pageLabels[page]}</div>
-        <div className="flex gap-[28px] items-start">
-          <Sidebar activePage={page} onNavigate={setPage} />
-          <main className="flex-1 min-w-0">
-            {page === 'overview' && <OverviewPage />}
-            {page === 'aiInfo' && <AIInfoPage />}
-            {page === 'orgActivity' && <OrgActivityPage />}
-          </main>
-        </div>
+    <div className="min-h-screen bg-white">
+      <div className="flex">
+     <Sidebar activePage={page} onNavigate={setPage} />
+        <main className="flex-1 min-w-0 p-[24px]">
+          {page === 'overview' && <OverviewPage />}
+          {page === 'aiInfo' && <AIInfoPage />}
+          {page === 'orgActivity' && <OrgActivityPage />}
+        </main>
       </div>
     </div>
   )
