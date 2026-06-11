@@ -43,44 +43,41 @@ function QuarterGoals() {
         </a>
       </div>
       <div className="flex gap-[16px]">
-        {/* 指标卡 1 */}
-        <div className="flex-1 bg-white border border-gray-100 rounded-[16px] p-[24px] shadow-[0_2px_10px_rgba(0,0,0,0.02)] transition-all hover:shadow-lg hover:-translate-y-1 cursor-pointer">
-          <div className="text-[13px] text-gray-500 mb-[12px] font-medium">支付成功率</div>
+        <a href="#" className="block flex-1 bg-white border border-gray-100 rounded-[16px] p-[24px] shadow-[0_2px_10px_rgba(0,0,0,0.02)] transition-all hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+          <div className="text-[13px] text-gray-500 mb-[12px] font-medium">活跃用户增长</div>
           <div className="flex items-baseline gap-[12px]">
-            <div className="text-[36px] font-bold text-gray-400 tracking-tight tabular-nums">—</div>
-            <div className="text-[13px] font-medium text-gray-400 bg-gray-100 px-[8px] py-[2px] rounded-full">待接入</div>
+            <div className="text-[36px] font-bold text-gray-900 tracking-tight tabular-nums">12,540</div>
+            <div className="text-[13px] font-medium text-emerald-500 bg-emerald-50 px-[8px] py-[2px] rounded-full">+10.2%</div>
           </div>
           <div className="mt-[16px] h-[30px] flex items-end gap-[4px]">
             {[30, 50, 40, 70, 60, 90].map((h, i) => (
               <div key={i} className={`w-full rounded-t-[4px] ${i === 5 ? 'bg-blue-500' : 'bg-blue-100'}`} style={{ height: `${h}%` }} />
             ))}
           </div>
-        </div>
-        {/* 指标卡 2 */}
-        <div className="flex-1 bg-white border border-gray-100 rounded-[16px] p-[24px] shadow-[0_2px_10px_rgba(0,0,0,0.02)] transition-all hover:shadow-lg hover:-translate-y-1 cursor-pointer">
-          <div className="text-[13px] text-gray-500 mb-[12px] font-medium">系统可用率</div>
+        </a>
+        <a href="#" className="block flex-1 bg-white border border-gray-100 rounded-[16px] p-[24px] shadow-[0_2px_10px_rgba(0,0,0,0.02)] transition-all hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+          <div className="text-[13px] text-gray-500 mb-[12px] font-medium">季度营收转化</div>
           <div className="flex items-baseline gap-[12px]">
-            <div className="text-[36px] font-bold text-gray-400 tracking-tight tabular-nums">—</div>
-            <div className="text-[13px] font-medium text-gray-400 bg-gray-100 px-[8px] py-[2px] rounded-full">待接入</div>
+            <div className="text-[36px] font-bold text-gray-900 tracking-tight tabular-nums">$248k</div>
+            <div className="text-[13px] font-medium text-emerald-500 bg-emerald-50 px-[8px] py-[2px] rounded-full">+24.8%</div>
           </div>
           <div className="mt-[16px] h-[30px] flex items-end gap-[4px]">
             {[40, 30, 60, 80, 70, 100].map((h, i) => (
               <div key={i} className={`w-full rounded-t-[4px] ${i === 5 ? 'bg-emerald-500' : 'bg-emerald-100'}`} style={{ height: `${h}%` }} />
             ))}
           </div>
-        </div>
-        {/* 指标卡 3 */}
-        <div className="flex-1 bg-white border border-gray-100 rounded-[16px] p-[24px] shadow-[0_2px_10px_rgba(0,0,0,0.02)] transition-all hover:shadow-lg hover:-translate-y-1 cursor-pointer">
-          <div className="text-[13px] text-gray-500 mb-[12px] font-medium">平均响应时间</div>
+        </a>
+        <a href="#" className="block flex-1 bg-white border border-gray-100 rounded-[16px] p-[24px] shadow-[0_2px_10px_rgba(0,0,0,0.02)] transition-all hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+          <div className="text-[13px] text-gray-500 mb-[12px] font-medium">系统稳定性</div>
           <div className="flex items-baseline gap-[12px]">
-            <div className="text-[36px] font-bold text-gray-400 tracking-tight tabular-nums">—</div>
-            <div className="text-[13px] font-medium text-gray-400 bg-gray-100 px-[8px] py-[2px] rounded-full">待接入</div>
+            <div className="text-[36px] font-bold text-gray-900 tracking-tight tabular-nums">99.9%</div>
+            <div className="text-[13px] font-medium text-gray-500 bg-gray-100 px-[8px] py-[2px] rounded-full">达标</div>
           </div>
           <div className="mt-[16px] flex items-center gap-[8px]">
-            <CheckCircle size={16} className="text-gray-300" />
-            <span className="text-[13px] text-gray-400">接入监控平台后自动更新</span>
+            <CheckCircle size={16} className="text-emerald-500" />
+            <span className="text-[13px] text-gray-600">所有系统运行正常</span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   )

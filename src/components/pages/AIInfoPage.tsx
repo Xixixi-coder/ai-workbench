@@ -3,37 +3,6 @@ import { Star, BookOpen } from 'lucide-react'
 
 const NEWSLETTER_BASE = 'https://luolan0214.github.io/follow-builders-newsletter/'
 
-const aiNews = [
-  {
-    title: '苹果入局日报',
-    desc: 'Apple 宣布全设备 AI 能力；OpenAI 发布 2026 路线图定义 AGI 层级；Steipete 称一人等于 50 工程师；Claude Code 一周年',
-    date: '2026-06-10',
-    issue: 23,
-    link: NEWSLETTER_BASE + 'issues/ai-builders-digest-2026-06-10-rerun.html',
-  },
-  {
-    title: 'Benchmark 3.0 日报',
-    desc: 'FrontierCode 发布揭示半数 SWEBench 结果是 slop；OpenAI 公布路线图；NotebookLM 扩展搜索和输出格式',
-    date: '2026-06-09',
-    issue: 22,
-    link: NEWSLETTER_BASE + 'issues/ai-builders-digest-2026-06-09-rerun.html',
-  },
-  {
-    title: '设计 Loop 日报',
-    desc: 'Steipete 13734 赞推文呼吁 "去设计 loop 来 prompt agent"；OpenAI 100 天 10x 限额激励',
-    date: '2026-06-08',
-    issue: 21,
-    link: NEWSLETTER_BASE + 'issues/ai-builders-digest-2026-06-08-rerun.html',
-  },
-  {
-    title: 'Model Routing 周末版',
-    desc: 'Levie 长文谈 token 经济与模型路由；企业三阶段路由演进；加州竞业禁止规则解释研究 alpha 衰减',
-    date: '2026-06-07',
-    issue: 20,
-    link: NEWSLETTER_BASE + 'issues/ai-builders-digest-2026-06-07-rerun.html',
-  },
-]
-
 const ghSkills = [
   { name: 'openclaw/openclaw', stars: '378k', desc: 'Your own personal AI assistant', lang: 'TypeScript', url: 'https://github.com/openclaw/openclaw' },
   { name: 'n8n-io/n8n', stars: '192k', desc: 'Workflow automation with native AI capabilities', lang: 'TypeScript', url: 'https://github.com/n8n-io/n8n' },
@@ -83,7 +52,6 @@ export default function AIInfoPage() {
                 <div className="p-[20px] bg-[#F8F9FA] rounded-[12px] hover:shadow-sm transition-shadow">
                   <h3 className="text-[16px] font-semibold text-gray-800 mb-[8px]">金融支付 × AI 探索</h3>
                   <p className="text-[14px] text-gray-500 leading-relaxed">汇集最新支付行业与大模型结合的落地案例，探索智能客服、风控、投研等场景的变革与技术实践。</p>
-                  <div className="text-[12px] text-gray-400 mt-[8px]">RSS 订阅源待接入</div>
                 </div>
                 <div className="p-[20px] bg-[#F8F9FA] rounded-[12px] hover:shadow-sm transition-shadow">
                   <div className="flex items-center justify-between mb-[8px]">
@@ -97,24 +65,7 @@ export default function AIInfoPage() {
                       阅读原刊 ↗
                     </a>
                   </div>
-                  <p className="text-[14px] text-gray-500 mb-[12px]">精选 Newsletter 内容，自动追踪硅谷与国内顶级团队的最新突破。</p>
-                  <div className="grid grid-cols-2 gap-[8px]">
-                    {aiNews.map((n) => (
-                      <a
-                        key={n.issue}
-                        href={n.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-[12px] bg-white rounded-[8px] border border-gray-100 hover:border-blue-200 hover:shadow-sm transition-all group"
-                      >
-                        <div className="flex items-center justify-between mb-[4px]">
-                          <span className="text-[13px] font-medium text-gray-800 group-hover:text-blue-600 transition-colors">#{n.issue} {n.title}</span>
-                          <span className="text-[11px] text-gray-400">{n.date}</span>
-                        </div>
-                        <div className="text-[12px] text-gray-500 line-clamp-1">{n.desc}</div>
-                      </a>
-                    ))}
-                  </div>
+                  <p className="text-[14px] text-gray-500">精选 Newsletter 内容，自动追踪硅谷与国内顶级团队的最新突破。</p>
                 </div>
               </div>
             )}
