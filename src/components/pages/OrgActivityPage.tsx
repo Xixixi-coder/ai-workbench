@@ -4,8 +4,8 @@ export default function OrgActivityPage() {
   return (
     <div>
       <div className="mb-[24px]">
-        <h1 className="text-[28px] font-bold text-[#111827] mb-[4px]">组织与团队建设</h1>
-        <p className="text-[14px] text-[#6b7280]">处理团队内部排班、家庭日组织及团建经费等相关事宜。</p>
+        <h1 className="text-[28px] font-bold text-[#111827] mb-[4px]">组织与团建</h1>
+        <p className="text-[14px] text-[#6b7280]">排班、家庭日与团建经费管理</p>
       </div>
       <div className="bg-white rounded-[16px] p-[24px] shadow-[0_1px_3px_rgba(0,0,0,0.08)] border border-[#e5e7eb]">
         <div className="flex items-center gap-[8px] mb-[24px]">

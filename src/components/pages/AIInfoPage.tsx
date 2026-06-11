@@ -21,8 +21,8 @@ export default function AIInfoPage() {
   return (
     <div>
       <div className="mb-[24px]">
-        <h1 className="text-[28px] font-bold text-[#111827] mb-[4px]">AI 资讯聚合</h1>
-        <p className="text-[14px] text-[#6b7280]">追踪行业最新AI动态、Github高赞技能以及部门内部最佳实践。</p>
+        <h1 className="text-[28px] font-bold text-[#111827] mb-[4px]">AI 资讯</h1>
+        <p className="text-[14px] text-[#6b7280]">行业动态、开源趋势与内部实践</p>
       </div>
       <div className="bg-white rounded-[16px] p-[24px] shadow-[0_1px_3px_rgba(0,0,0,0.08)] border border-[#e5e7eb]">
         <div className="flex justify-between items-center mb-[24px]">
@@ -49,8 +49,8 @@ export default function AIInfoPage() {
           {activeTab === 'news' && (
             <div className="flex flex-col gap-[14px]">
               <div className="p-[20px] bg-[#f9fafb] rounded-[12px]">
-                <h3 className="text-[16px] font-semibold text-[#111827] mb-[6px]">金融支付 × AI 探索</h3>
-                <p className="text-[14px] text-[#6b7280] leading-relaxed">汇集最新支付行业与大模型结合的落地案例，探索智能客服、风控、投研等场景的变革与技术实践。</p>
+                <h3 className="text-[16px] font-semibold text-[#111827] mb-[6px]">金融支付 × AI</h3>
+                <p className="text-[14px] text-[#6b7280] leading-relaxed">支付行业与大模型结合的落地案例与技术实践。</p>
               </div>
               <div className="p-[20px] bg-[#f9fafb] rounded-[12px]">
                 <div className="flex items-center justify-between mb-[6px]">
@@ -64,14 +64,14 @@ export default function AIInfoPage() {
                     阅读原刊 ↗
                   </a>
                 </div>
-                <p className="text-[14px] text-[#6b7280]">精选 Newsletter 内容，自动追踪硅谷与国内顶级团队的最新突破。</p>
+                <p className="text-[14px] text-[#6b7280]">精选 Newsletter，追踪顶级团队最新突破。</p>
               </div>
             </div>
           )}
 
           {activeTab === 'skills' && (
             <div className="flex flex-col gap-[10px]">
-              <div className="text-[13px] text-[#9ca3af] font-medium mb-[4px]">GitHub 高赞 AI 项目精选</div>
+              <div className="text-[13px] text-[#9ca3af] font-medium mb-[4px]">GitHub 高赞项目</div>
               {ghSkills.map(skill => (
                 <a
                   key={skill.name}
@@ -101,8 +101,8 @@ export default function AIInfoPage() {
                 <div className="w-[48px] h-[48px] bg-white rounded-full flex items-center justify-center shadow-sm mx-auto mb-[16px]">
                   <BookOpen size={20} className="text-[#9ca3af]" />
                 </div>
-                <h3 className="text-[16px] font-semibold text-[#111827] mb-[6px]">内部沉淀与最佳实践</h3>
-                <p className="text-[14px] text-[#6b7280] mb-[20px] max-w-[400px] mx-auto">汇集部门内创新分享、架构演进与教程文档，打造团队知识中枢。</p>
+                <h3 className="text-[16px] font-semibold text-[#111827] mb-[6px]">内部最佳实践</h3>
+                <p className="text-[14px] text-[#6b7280] mb-[20px] max-w-[400px] mx-auto">部门创新分享、架构演进与教程文档。</p>
                 <a
                   href={JOYSPACE_TEAM_URL}
                   target="_blank"
