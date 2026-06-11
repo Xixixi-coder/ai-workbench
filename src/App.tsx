@@ -1,31 +1,21 @@
 import { useState } from 'react'
-import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import type { PageKey } from './components/Sidebar'
-import DashboardPage from './components/pages/DashboardPage'
-import TasksPage from './components/pages/TasksPage'
-import OrgActivitiesPage from './components/pages/OrgActivitiesPage'
-import NewsFeedPage from './components/pages/NewsFeedPage'
-import KnowledgePage from './components/pages/KnowledgePage'
-
-const pages: Record<PageKey, (onNavigate: (p: PageKey) => void) => React.ReactNode> = {
-  dashboard: (onNavigate) => <DashboardPage onNavigate={onNavigate} />,
-  tasks: () => <TasksPage />,
-  org: () => <OrgActivitiesPage />,
-  news: () => <NewsFeedPage />,
-  knowledge: () => <KnowledgePage />,
-}
+import OverviewPage from './components/pages/OverviewPage'
+import AIInfoPage from './components/pages/AIInfoPage'
+import OrgActivityPage from './components/pages/OrgActivityPage'
 
 export default function App() {
-  const [page, setPage] = useState<PageKey>('dashboard')
+  const [page, setPage] = useState<PageKey>('overview')
 
   return (
-    <div className="h-screen flex flex-col bg-ground">
-      <Header />
-      <div className="flex flex-1 overflow-hidden">
+    <div className="w-full min-h-screen bg-[#f0f2f5]">
+      <div className="mx-auto flex">
         <Sidebar activePage={page} onNavigate={setPage} />
-        <main className="flex-1 overflow-y-auto">
-          {pages[page](setPage)}
+        <main className="flex-1 bg-gray-50/50 min-h-screen overflow-y-auto">
+          {page === 'overview' && <OverviewPage />}
+          {page === 'aiInfo' && <AIInfoPage />}
+          {page === 'orgActivity' && <OrgActivityPage />}
         </main>
       </div>
     </div>
