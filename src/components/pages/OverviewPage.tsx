@@ -184,13 +184,13 @@ function AIToolsCard() {
 
 export default function OverviewPage() {
   return (
-    <div className="flex flex-col h-full p-[40px] gap-[24px]">
+    <div className="flex flex-col gap-[24px]">
       <QuarterGoals />
-      <div className="flex gap-[24px] flex-1 min-h-0">
+      <div className="flex gap-[24px] min-h-[400px]">
         <div className="flex-[2] flex flex-col">
           <TodoList />
         </div>
-        <div className="flex-[1] flex flex-col gap-[24px]">
+        <div className="flex-[1] flex flex-col gap-[20px]">
           <TeamCollab />
           <AIToolsCard />
         </div>

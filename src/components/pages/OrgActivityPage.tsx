@@ -2,12 +2,12 @@ import { Calendar, Coffee, QrCode, ExternalLink } from 'lucide-react'
 
 export default function OrgActivityPage() {
   return (
-    <div className="flex-1 p-[40px]">
-      <div className="mb-[32px]">
+    <div>
+      <div className="mb-[24px]">
         <h1 className="text-[28px] font-bold text-gray-900 mb-[8px]">组织与团队建设</h1>
         <p className="text-[14px] text-gray-500">处理团队内部排班、家庭日组织及团建经费等相关事宜。</p>
       </div>
-      <div className="max-w-[1000px]">
+      <div>
         <div className="bg-white rounded-[16px] p-[24px] shadow-sm border border-gray-100">
           <div className="flex items-center gap-[8px] mb-[24px]">
             <div className="w-[4px] h-[16px] bg-emerald-500 rounded-full" />

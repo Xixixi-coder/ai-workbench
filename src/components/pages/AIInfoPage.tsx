@@ -19,12 +19,12 @@ export default function AIInfoPage() {
   const [activeTab, setActiveTab] = useState<Tab>('news')
 
   return (
-    <div className="flex-1 p-[40px]">
-      <div className="mb-[32px]">
+    <div>
+      <div className="mb-[24px]">
         <h1 className="text-[28px] font-bold text-gray-900 mb-[8px]">AI 资讯聚合</h1>
         <p className="text-[14px] text-gray-500">追踪行业最新AI动态、Github高赞技能以及部门内部最佳实践。</p>
       </div>
-      <div className="max-w-[1000px]">
+      <div>
         <div className="bg-white rounded-[16px] p-[24px] shadow-sm border border-gray-100">
           <div className="flex justify-between items-center mb-[24px]">
             <div className="flex items-center gap-[8px]">
